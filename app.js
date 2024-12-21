@@ -14,6 +14,9 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 ConnectDb();
+app.get("/",(req,res)=>{
+    res.send("<h1>Backend Server is Running<\h1>");
+})
 app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }))
